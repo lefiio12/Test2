@@ -1,7 +1,7 @@
 #################
 ## Eclipse
 #################
-
+Models/Database.php
 *.pydevproject
 .project
 .metadata
