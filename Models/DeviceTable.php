@@ -8,7 +8,7 @@ class DeviceTable extends TableAbstract{
     protected $primaryKey='deviceID';
     
     public function updateLocation($ID, $long, $lat){
-        $sql='UPDATE '. $this->name .' SET long=:Long, lat=:Lat WHERE ID=:ID';
+        $sql='UPDATE '. $this->name .' SET devices.long=:Long, lat=:Lat WHERE deviceID=:ID';
         $sth = $this->dbh->prepare($sql);
         $sth->execute([
             ':ID' => $ID,
