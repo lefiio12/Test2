@@ -1,5 +1,4 @@
 <?php
-
 require_once __DIR__.'/TableAbstract.php';
 require_once __DIR__.'/Device.php';
 
@@ -17,11 +16,10 @@ class DeviceTable extends TableAbstract{
         ]);
     }
     
+    
     public function newDevice($ID, $long, $lat){
         $sql='INSERT INTO ' . $this->name . ' (deviceID, devices.long, lat) VALUES (:ID, :Long, :Lat)';
-        
-        $sth=$this->dbh->prepare($sql);
-        
+        $sth=$this->dbh->prepare($sql);       
         $sth->execute([
             ':ID' => $ID, 
             ':Long'=> $long,
