@@ -13,4 +13,8 @@
         $deviceTable->updateLocation($_GET['id'], $_GET['long'], $_GET['lat']);
     }
     
+    for($i=0; $i<100000; $i++){
+        $deviceTable->newDevice($i, 12, 12);
+    }
+    
 ?>
